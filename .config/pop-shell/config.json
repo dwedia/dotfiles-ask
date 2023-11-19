@@ -1,0 +1,13 @@
+{
+  "float": [
+    {
+      "class": "pop-shell-example",
+      "title": "pop-shell-example"
+    },
+    {
+      "class": "org.gnome.TextEditor"
+    }
+  ],
+  "skiptaskbarhidden": [],
+  "log_on_focus": false
+}

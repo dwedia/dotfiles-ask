@@ -1,0 +1,19 @@
+# Alacritty config.
+# Documentation here: https://alacritty.org/config-alacritty.html
+
+[window] 
+# decorations = "Full" | "None" 
+decorations = "Full"
+# startup_mode = "Windowed" | "Maximized" | "Fullscreen"
+startup_mode = "Maximized"
+
+[scrolling]
+history = 10000
+
+[font]
+# font settings
+normal = { family = "monospace", style = "Regular" }
+#bold = { style = "Bold" }
+#italic = { style = "Italic" }
+#bold_italic = { style = "Bold Italic" }
+size = 15.00

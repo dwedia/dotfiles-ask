@@ -1,0 +1,5 @@
+---
+
+# list of tags to skip
+skip_list:
+  - yaml[line-length]

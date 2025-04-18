@@ -1,0 +1,41 @@
+---
+- hosts: localhost
+
+  tasks:
+    - name: check if distrobox is installed
+      ansible.builtin.stat:
+        path: /usr/bin/distrobox
+      register: distroboxInstalled
+
+    - name: Upgrade installed distroboxes
+      ansible.builtin.shell: distrobox upgrade --all
+      register:  distroboxUpgradeOutput
+      when: distroboxInstalled is defined
+    
+    - name: Show distrobox upgrades
+      ansible.builtin.debug:
+        var: distroboxUpgradeOutput.stdout_lines
+      when: distroboxUpgradeOutput is defined
+
+    - name: Check if flatpak is installed
+      ansible.builtin.stat:
+        path: /usr/bin/flatpak
+      register: flatpakInstalled
+
+    - name: Upgrade flatpaks
+      shell: /usr/bin/flatpak update -y
+      register: flatpakUpgradeOutput
+      when: flatpakInstalled is defined
+
+    - name: Show Flatpak packages upgraded
+      ansible.builtin.debug:
+        var: flatpakUpgradeOutput.stdout_lines
+      when: flatpakUpgradeOutput is defined
+
+    - name: Upgrade Fedora Atomic
+      ansible.builtin.shell: rpm-ostree upgrade
+      register: upgradeOutput
+
+    - name: Show packages upgraded
+      ansible.builtin.debug:
+        var: upgradeOutput.stdout_lines

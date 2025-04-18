@@ -2,9 +2,9 @@
 
 ### Script to update Fedora Atomic with ansible
 
-if [ -f $HOME/.local/scripts/updatesWithAnsibleDNF/updatesWithAnsibleDNF.yml ];
+if [ -f $HOME/.local/scripts/updatesWithAnsibleRPMostree/updatesWithAnsible.yml ];
 then
-  ansible-playbook $HOME/.local/scripts/updatesWithAnsibleDNF/updatesWithAnsibleDNF.yml -K
+  ansible-playbook $HOME/.local/scripts/updatesWithAnsibleRPMostree/updatesWithAnsible.yml -K
 else
-  echo "updatesWithAnsible playbook is not present"
+  echo "updatesWithAnsible is not present"
 fi

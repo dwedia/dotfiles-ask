@@ -1,8 +1,8 @@
 # mapping eza to ls
-alias ls='eza --oneline --group-directories-first'
-alias lsa='eza --oneline --group-directories-first --all'
-alias ll='eza --long --group-directories-first'
-alias lla='eza --long --group-directories-first --all'
+#alias ls='eza --oneline --group-directories-first'
+#alias lsa='eza --oneline --group-directories-first --all'
+#alias ll='eza --long --group-directories-first'
+#alias lla='eza --long --group-directories-first --all'
 
 # Show weather in at home
 alias weather='curl -s wttr.in/odder'

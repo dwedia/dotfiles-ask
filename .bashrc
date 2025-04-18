@@ -23,13 +23,25 @@ if [ -d ~/.bashrc.d ]; then
     done
 fi
 unset rc
-if [ -d "$HOME/.local/bin" ] ; then
-  PATH="$HOME/.local/bin:$PATH"
+for dir in "$HOME/.local/bin" "$HOME/.local/scripts" "$HOME/bin"; do
+  case ":$PATH:" in
+    *":$dir:"*) ;;
+    *) PATH="$dir:$PATH" ;;
+  esac
+done
+export PATH
+
+if [ -f $HOME/.bash_aliases ] ; then
+  . ~/.bash_aliases
 fi
 
-if [ -d "$HOME/.local/scripts" ] ; then
-  PATH="$HOME/.local/scripts:$PATH"
-fi
+for dir in "$HOME/.local/bin" "$HOME/.local/scripts" "$HOME/bin"; do
+  case ":$PATH:" in
+    *":$dir:"*) ;;
+    *) PATH="$dir:$PATH" ;;
+  esac
+done
+export PATH
 
 if [ -f $HOME/.bash_aliases ] ; then
   . ~/.bash_aliases

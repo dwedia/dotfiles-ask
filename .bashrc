@@ -47,3 +47,5 @@ if [ -f $HOME/.bash_aliases ] ; then
   . ~/.bash_aliases
 fi
 
+# Set vagrant provider libvirt
+export VAGRANT_DEFAULT_PROVIDER=libvirt

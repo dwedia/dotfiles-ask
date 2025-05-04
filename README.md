@@ -8,5 +8,5 @@ stow -vR --adopt .
 stow -v .
 
 
-**Packages required for hyperland setup:**
+**Packages required for hyperland setup:**  
 network-manager-applet blueman SwayNotificationCenter swaybg kanshi swaylock swayidle rofi-wayland

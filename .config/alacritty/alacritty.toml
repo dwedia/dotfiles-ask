@@ -13,4 +13,4 @@ normal = { family = "monospace", style = "Regular" }
 #bold = { style = "Bold" }
 #italic = { style = "Italic" }
 #bold_italic = { style = "Bold Italic" }
-size = 12.00
+size = 15.00

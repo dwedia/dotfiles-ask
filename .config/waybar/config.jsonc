@@ -9,8 +9,7 @@
     "modules-left": [
         "sway/scratchpad",
         "hyprland/workspaces",
-        "hyprland/submap",
-        "wlr/taskbar"
+        "hyprland/submap"
     ],
     "modules-center": [
         "sway/window"
@@ -20,8 +19,6 @@
         "pulseaudio",
         "network",
         "power-profiles-daemon",
-        "cpu",
-        "memory",
         "temperature",
         "backlight",
         "sway/language",
@@ -35,13 +32,18 @@
         "all-outputs": true,
         "warp-on-scroll": false,
         // "format": "{name}: {icon}",
-        "format": "{name}",
+        "format": "{icon}",
         "format-icons": {
-            "1": "",
-            "2": "",
-            "3": "",
-            "4": "",
-            "5": "",
+            "1": "1",
+            "2": "2",
+            "3": "3",
+            "4": "4",
+            "5": "5",
+            "6": "6",
+            "7": "7",
+            "8": "8",
+            "9": "9",
+            "0": "0",
             "urgent": "",
             "focused": "",
             "default": ""
@@ -168,7 +170,7 @@
     },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "{essid} ({signalStrength}%) ",
+        "format-wifi": "({signalStrength}%) ",
         "format-ethernet": "{ipaddr}/{cidr} ",
         "tooltip-format": "{ifname} via {gwaddr} ",
         "format-linked": "{ifname} (No IP) ",

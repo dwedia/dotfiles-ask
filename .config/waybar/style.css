@@ -1,10 +1,13 @@
+@import "theme.css";
+
 * {
     font-family: 'Noto Sans Mono', 'Font Awesome 6 Free', 'Font Awesome 6 Brands', monospace;
     font-size: 17px;
 }
 
 window#waybar {
-    background-color: rgba(43, 48, 59, 0.5);
+    background: @shadow;
+    /* background-color: rgba(43, 48, 59, 0.5); */
     border-bottom: 0px solid rgba(100, 114, 125, 0.5);
     color: #ffffff;
     transition-property: background-color;
@@ -55,7 +58,7 @@ button:hover {
 #workspaces button {
     padding: 0 5px;
     /* background-color: transparent; */
-    background-color: black;
+    background-color: @shadow;
     color: #ffffff;
 }
 
@@ -325,4 +328,7 @@ label:focus {
 
 #privacy-item.audio-out {
     background-color: #0069d4;
+}
+#powermenu {
+    color: @module-fg;
 }

@@ -7,12 +7,12 @@
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": [
+        "hyprland/workspaces",
         "sway/scratchpad",
-        "hyprland/submap",
-        "wlr/taskbar"
+        "hyprland/submap"
     ],
     "modules-center": [
-        "hyprland/workspaces"
+        "clock"
     ],
     "modules-right": [
         "idle_inhibitor",
@@ -24,7 +24,6 @@
         "sway/language",
         "battery",
         "tray",
-        "clock",
         "custom/powermenu"
     ],
     // Modules configuration
@@ -119,6 +118,7 @@
         "spacing": 10
     },
     "clock": {
+        "format": "{:%Y-%m-%d - %H:%M}",
         // "timezone": "America/New_York",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%Y-%m-%d}"

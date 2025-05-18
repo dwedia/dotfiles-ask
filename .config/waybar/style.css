@@ -1,15 +1,20 @@
 @import "theme.css";
 
+@define-color button-bg @base;
+@define-color button-fg @main-fg;
+
+@define-color purple #8851c9;
+
 * {
     font-family: 'Noto Sans Mono', 'Font Awesome 6 Free', 'Font Awesome 6 Brands', monospace;
     font-size: 17px;
 }
 
 window#waybar {
-    background: @shadow;
+    background-color: @base;
     /* background-color: rgba(43, 48, 59, 0.5); */
     border-bottom: 0px solid rgba(100, 114, 125, 0.5);
-    color: #ffffff;
+    color: @main-fg;
     transition-property: background-color;
     transition-duration: .5s;
 }
@@ -28,11 +33,11 @@ window#waybar.solo {
 */
 
 window#waybar.termite {
-    background-color: #3F3F3F;
+    background-color: @white;
 }
 
 window#waybar.chromium {
-    background-color: #000000;
+    background-color: @white;
     border: none;
 }
 
@@ -47,7 +52,7 @@ button {
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 button:hover {
     background: inherit;
-    box-shadow: inset 0 -3px #ffffff;
+    box-shadow: inset 0 -3px @white;
 }
 
 /* you can set a style on hover for any module like this */
@@ -55,21 +60,30 @@ button:hover {
     background-color: #a37800;
 }
 
-#workspaces button {
-    padding: 0 5px;
-    /* background-color: transparent; */
+#workspaces {
+    padding: 0px 5px;
     background-color: @shadow;
-    color: #ffffff;
+    border-radius: 0px 50px 50px 0px;
+}
+
+#workspaces button {
+    padding: 0 15px;
+    /* background-color: transparent; */
+    /* background-color: @shadow; */
+    color: @purple;
+    transition: all .2s ease;
 }
 
 #workspaces button:hover {
-    background: rgba(0, 0, 0, 0.2);
+    background: @crust;
 }
 
 #workspaces button.active {
-    background-color: purple;
+    /* background-color: @red; */
+    color: @white;
+    border-radius: 50px;
     /* background-color: #64727D; */
-    box-shadow: inset 0 -3px #ffffff;
+    /*box-shadow: inset 0 -3px #ffffff; */
 }
 
 #workspaces button.urgent {
@@ -118,16 +132,16 @@ button:hover {
 }
 
 #clock {
-    background-color: black;
+    background-color: @button-bg;
 }
 
 #battery {
-    background-color: #ffffff;
-    color: #000000;
+    background-color: @button-bg;
+    color: @button-fg;
 }
 
 #battery.charging, #battery.plugged {
-    color: #ffffff;
+    color: @button-fg;
     background-color: #26A65B;
 }
 
@@ -154,18 +168,18 @@ button:hover {
 }
 
 #power-profiles-daemon.performance {
-    background-color: #f53c3c;
-    color: #ffffff;
+    /* background-color: #f53c3c; */
+    color: #f53c3c;
 }
 
 #power-profiles-daemon.balanced {
-    background-color: #2980b9;
-    color: #ffffff;
+    background-color: @button-bg;
+    color: @button-fg;
 }
 
 #power-profiles-daemon.power-saver {
-    background-color: #2ecc71;
-    color: #000000;
+    /* background-color: #2ecc71; */
+    color: #2ecc71;
 }
 
 label:focus {
@@ -173,24 +187,24 @@ label:focus {
 }
 
 #cpu {
-    background-color: #2980b9;
-    color: #000000;
+    background-color: @button-bg;
+    color: @button-fg;
 }
 
 #memory {
-    background-color: #2980b9;
+    background-color: @button-bg;
 }
 
 #disk {
-    background-color: #2980b9;
+    background-color: @button-bg;
 }
 
 #backlight {
-    background-color: #90b1b1;
+    background-color: @button-bg;
 }
 
 #network {
-    background-color: #2980b9;
+    background-color: @button-bg;
 }
 
 #network.disconnected {
@@ -198,12 +212,12 @@ label:focus {
 }
 
 #pulseaudio {
-    background-color: #2980b9;
+    background-color: @button-bg;
     color: #ffffff;
 }
 
 #pulseaudio.muted {
-    background-color: #90b1b1;
+    background-color: @button-bg;
     color: #2a5c45;
 }
 
@@ -231,7 +245,7 @@ label:focus {
 }
 
 #temperature {
-    background-color: #f0932b;
+    background-color: @button-bg;
 }
 
 #temperature.critical {
@@ -239,7 +253,7 @@ label:focus {
 }
 
 #tray {
-    background-color: #2980b9;
+    background-color: @button-bg;
 }
 
 #tray > .passive {
@@ -252,7 +266,7 @@ label:focus {
 }
 
 #idle_inhibitor {
-    background-color: #2d3436;
+    background-color: @button-bg;
 }
 
 #idle_inhibitor.activated {
@@ -329,6 +343,7 @@ label:focus {
 #privacy-item.audio-out {
     background-color: #0069d4;
 }
-#powermenu {
-    color: @module-fg;
+.custom-powermenu {
+    background-color: @button-fg;
+    color: #000000;
 }

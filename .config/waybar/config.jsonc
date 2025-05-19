@@ -48,9 +48,6 @@
             "focused": "",
             "default": ""
         },
-        "persistent-workspaces": {
-            "*": [ 1,2,3,4 ], // 1-4 on every monitor
-        }
     },
     "keyboard-state": {
         "numlock": true,

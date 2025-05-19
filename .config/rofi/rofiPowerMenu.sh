@@ -8,7 +8,7 @@ logout="🚪 Logout"
 cancel="❌ Cancel"
 
 # Rofi CMD
-chosen="$(printf "%s\n" "$lock" "$logout" "$reboot" "$shutdown" "$cancel" | rofi -dmenu -i -p "Power Menu")"
+chosen="$(printf "%s\n" "$lock" "$logout" "$reboot" "$shutdown" "$cancel" | rofi -theme ~/.config/rofi/powerMenu.rasi -dmenu -i -p "Power Menu")"
 
 case "$chosen" in
     "$shutdown") systemctl poweroff ;;

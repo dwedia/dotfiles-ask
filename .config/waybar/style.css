@@ -74,6 +74,10 @@ button:hover {
     transition: all .2s ease;
 }
 
+#workspaces button.persistent {
+    color: red;
+}
+
 #workspaces button:hover {
     background: @crust;
 }

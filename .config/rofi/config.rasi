@@ -1,4 +1,8 @@
 configuration {
-  font: "monospace 20";
+  font: "monospace 30";
 }
-@theme "Monokai"
+@theme "Arc-Dark"
+
+window {
+  height: 700px;
+}

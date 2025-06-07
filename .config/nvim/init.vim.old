@@ -1,0 +1,34 @@
+" set yank to normal clipboard
+set clipboard=unnamedplus  
+
+" set paste with middle-click
+"set mouse=nv
+
+" Set tab width to 2 columns.
+set tabstop=2
+
+" Set indentation width to 2 spaces
+set shiftwidth=2
+
+" Use space characters instead of tabs.
+set expandtab
+
+" While searching though a file incrementally highlight matching characters as you type.
+set incsearch
+
+" Always display the status bar
+set laststatus=2
+
+" Always show cursor position
+set ruler
+
+" Turn on autoindent
+set autoindent
+
+" Turn on smart indent
+set smartindent
+
+" Hightlight the current line
+set cursorline
+
+
